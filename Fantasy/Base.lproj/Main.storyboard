@@ -126,7 +126,7 @@
                                 <rect key="frame" x="41" y="57" width="238" height="38"/>
                                 <state key="normal" title="Pick your team"/>
                                 <connections>
-                                    <segue destination="KG8-g8-5gg" kind="presentation" id="sZL-gq-DEq"/>
+                                    <segue destination="W9f-GA-X1m" kind="presentation" id="sZL-gq-DEq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mX5-c3-dAj">
@@ -179,7 +179,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerCell" rowHeight="120" id="sSJ-8c-Izp" customClass="TeamListCell" customModule="Fantasy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sSJ-8c-Izp" id="EvI-oo-Iow">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
@@ -216,7 +216,7 @@
                                             <outlet property="nameLabel" destination="Nmp-sr-8tp" id="gqX-B0-i4h"/>
                                             <outlet property="positionLabel" destination="eTr-Xf-j7e" id="fBT-Bl-2FK"/>
                                             <outlet property="teamLabel" destination="vx4-Nc-t6t" id="BlI-Lq-AAO"/>
-                                            <segue destination="wTy-1z-o2w" kind="presentation" identifier="detail" id="SLZ-gW-9zn"/>
+                                            <segue destination="wTy-1z-o2w" kind="show" identifier="detail" id="SLZ-gW-9zn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -224,6 +224,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NGt-EA-xfy"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="tbs-iD-eMI" id="fxL-m4-t5K"/>
@@ -231,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rD5-eC-Ncq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="237"/>
+            <point key="canvasLocation" x="1920" y="237"/>
         </scene>
         <!--Player Detail View Controller-->
         <scene sceneID="Jft-Wd-cAU">
@@ -251,9 +252,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPq-he-Tbu">
-                                <rect key="frame" x="20" y="67" width="123" height="113"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1S-b1-uYC">
                                 <rect key="frame" x="151" y="67" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -276,14 +274,23 @@
                                 <rect key="frame" x="262" y="518" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPq-he-Tbu">
+                                <rect key="frame" x="20" y="67" width="123" height="113"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="iPq-he-Tbu" id="uiA-ob-w8r"/>
+                        <outlet property="nameLabel" destination="rEo-vH-Ir8" id="Er9-Bt-S85"/>
+                        <outlet property="positionLabel" destination="r1S-b1-uYC" id="lIT-Az-okE"/>
+                        <outlet property="teamLabel" destination="jWF-2Q-cfy" id="pBD-Y0-boJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mY-zT-x1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="237"/>
+            <point key="canvasLocation" x="2315" y="237"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="RbS-yp-qhI">
@@ -328,6 +335,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mp1-70-6Ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="209" y="-379"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aNm-V6-Ohc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W9f-GA-X1m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jpS-WI-rTj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KG8-g8-5gg" kind="relationship" relationship="rootViewController" id="4f4-ID-VfZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOI-8Y-Kyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="237"/>
         </scene>
     </scenes>
 </document>

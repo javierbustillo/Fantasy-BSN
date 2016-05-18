@@ -98,8 +98,8 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
             
             let playerDetailVC = segue.destinationViewController as! PlayerDetailViewController
             
-            newsDetailVC.news = news
-            newsDetailVC.index = index
+            playerDetailVC.players = players
+            playerDetailVC.index = index
         
         }
     

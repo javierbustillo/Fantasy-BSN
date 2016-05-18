@@ -12,12 +12,21 @@ import Parse
 
 class PlayerDetailViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var teamLabel: UILabel!
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     var players: [PFObject]!
     var index: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let player = players![index!]
+        
+        nameLabel.text = player["name"] as? String
+        positionLabel.text = player["postion"] as? String
+        
+        
         
         // Do any additional setup after loading the view.
     }
