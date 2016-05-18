@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29456DF3F54EC11523DFED1F /* Pods_Fantasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5445FB7ADBD68A72D87E21EF /* Pods_Fantasy.framework */; };
+		F62DC8B01CED0FA000BBB728 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DC8AF1CED0FA000BBB728 /* PlayerDetailViewController.swift */; };
+		F69215691CDE792000973BCE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69215681CDE792000973BCE /* HomeViewController.swift */; };
+		F6B9B9301CDF9F9700EF7071 /* TeamCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B9B92F1CDF9F9700EF7071 /* TeamCreatorViewController.swift */; };
+		F6B9B9321CDF9FAA00EF7071 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B9B9311CDF9FAA00EF7071 /* PlayerListViewController.swift */; };
+		F6B9B9351CDFA00500EF7071 /* TeamListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B9B9341CDFA00500EF7071 /* TeamListCell.swift */; };
 		F6BBF39D1CDD8FE30084E1E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF39C1CDD8FE30084E1E6 /* AppDelegate.swift */; };
-		F6BBF39F1CDD8FE30084E1E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF39E1CDD8FE30084E1E6 /* ViewController.swift */; };
 		F6BBF3A21CDD8FE30084E1E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BBF3A01CDD8FE30084E1E6 /* Main.storyboard */; };
 		F6BBF3A41CDD8FE30084E1E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6BBF3A31CDD8FE30084E1E6 /* Assets.xcassets */; };
 		F6BBF3A71CDD8FE30084E1E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BBF3A51CDD8FE30084E1E6 /* LaunchScreen.storyboard */; };
+		F6FFA6EC1CDD92970089B295 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFA6EB1CDD92970089B295 /* LogInViewController.swift */; };
+		F6FFA6EF1CDD932F0089B295 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFA6EE1CDD932F0089B295 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500C51B625EE64841B881BFD /* Pods-Fantasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantasy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fantasy/Pods-Fantasy.release.xcconfig"; sourceTree = "<group>"; };
+		5445FB7ADBD68A72D87E21EF /* Pods_Fantasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fantasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB62AB4A422431DF261FFA70 /* Pods-Fantasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fantasy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fantasy/Pods-Fantasy.debug.xcconfig"; sourceTree = "<group>"; };
+		F62DC8AF1CED0FA000BBB728 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
+		F69215681CDE792000973BCE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F6B9B92F1CDF9F9700EF7071 /* TeamCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCreatorViewController.swift; sourceTree = "<group>"; };
+		F6B9B9311CDF9FAA00EF7071 /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
+		F6B9B9341CDFA00500EF7071 /* TeamListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListCell.swift; sourceTree = "<group>"; };
 		F6BBF3991CDD8FE30084E1E6 /* Fantasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fantasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BBF39C1CDD8FE30084E1E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6BBF39E1CDD8FE30084E1E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F6BBF3A11CDD8FE30084E1E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6BBF3A31CDD8FE30084E1E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6BBF3A61CDD8FE30084E1E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6BBF3A81CDD8FE30084E1E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6FFA6EB1CDD92970089B295 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		F6FFA6EE1CDD932F0089B295 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29456DF3F54EC11523DFED1F /* Pods_Fantasy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC5A2BAB243672C73F2F8578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB62AB4A422431DF261FFA70 /* Pods-Fantasy.debug.xcconfig */,
+				500C51B625EE64841B881BFD /* Pods-Fantasy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3D8EE95B025BA3514F2FBBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5445FB7ADBD68A72D87E21EF /* Pods_Fantasy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F69215671CDE790600973BCE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F69215681CDE792000973BCE /* HomeViewController.swift */,
+				F6B9B92F1CDF9F9700EF7071 /* TeamCreatorViewController.swift */,
+				F6B9B9311CDF9FAA00EF7071 /* PlayerListViewController.swift */,
+				F62DC8AF1CED0FA000BBB728 /* PlayerDetailViewController.swift */,
+			);
+			name = ViewControllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F6B9B9331CDF9FD000EF7071 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6B9B9341CDFA00500EF7071 /* TeamListCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		F6B9B9361CDFA32C00EF7071 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		F6BBF3901CDD8FE20084E1E6 = {
 			isa = PBXGroup;
 			children = (
 				F6BBF39B1CDD8FE30084E1E6 /* Fantasy */,
 				F6BBF39A1CDD8FE30084E1E6 /* Products */,
+				AC5A2BAB243672C73F2F8578 /* Pods */,
+				C3D8EE95B025BA3514F2FBBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +117,26 @@
 		F6BBF39B1CDD8FE30084E1E6 /* Fantasy */ = {
 			isa = PBXGroup;
 			children = (
+				F6B9B9361CDFA32C00EF7071 /* Objects */,
 				F6BBF39C1CDD8FE30084E1E6 /* AppDelegate.swift */,
-				F6BBF39E1CDD8FE30084E1E6 /* ViewController.swift */,
 				F6BBF3A01CDD8FE30084E1E6 /* Main.storyboard */,
+				F69215671CDE790600973BCE /* ViewControllers */,
+				F6FFA6ED1CDD930A0089B295 /* AccountViewControllers */,
+				F6B9B9331CDF9FD000EF7071 /* Cells */,
 				F6BBF3A31CDD8FE30084E1E6 /* Assets.xcassets */,
 				F6BBF3A51CDD8FE30084E1E6 /* LaunchScreen.storyboard */,
 				F6BBF3A81CDD8FE30084E1E6 /* Info.plist */,
 			);
 			path = Fantasy;
+			sourceTree = "<group>";
+		};
+		F6FFA6ED1CDD930A0089B295 /* AccountViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6FFA6EB1CDD92970089B295 /* LogInViewController.swift */,
+				F6FFA6EE1CDD932F0089B295 /* CreateAccountViewController.swift */,
+			);
+			name = AccountViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6BBF3AB1CDD8FE30084E1E6 /* Build configuration list for PBXNativeTarget "Fantasy" */;
 			buildPhases = (
+				C9A6250A84067F2AB724F28B /* Check Pods Manifest.lock */,
 				F6BBF3951CDD8FE20084E1E6 /* Sources */,
 				F6BBF3961CDD8FE20084E1E6 /* Frameworks */,
 				F6BBF3971CDD8FE20084E1E6 /* Resources */,
+				E3CB29E56D5B161C7DC44872 /* Embed Pods Frameworks */,
+				CC2E73CF2389411C50F47CB5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +209,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C9A6250A84067F2AB724F28B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC2E73CF2389411C50F47CB5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fantasy/Pods-Fantasy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3CB29E56D5B161C7DC44872 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fantasy/Pods-Fantasy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F6BBF3951CDD8FE20084E1E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6BBF39F1CDD8FE30084E1E6 /* ViewController.swift in Sources */,
+				F6FFA6EF1CDD932F0089B295 /* CreateAccountViewController.swift in Sources */,
+				F6B9B9321CDF9FAA00EF7071 /* PlayerListViewController.swift in Sources */,
+				F6B9B9351CDFA00500EF7071 /* TeamListCell.swift in Sources */,
+				F6FFA6EC1CDD92970089B295 /* LogInViewController.swift in Sources */,
+				F62DC8B01CED0FA000BBB728 /* PlayerDetailViewController.swift in Sources */,
+				F6B9B9301CDF9F9700EF7071 /* TeamCreatorViewController.swift in Sources */,
 				F6BBF39D1CDD8FE30084E1E6 /* AppDelegate.swift in Sources */,
+				F69215691CDE792000973BCE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +382,7 @@
 		};
 		F6BBF3AC1CDD8FE30084E1E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB62AB4A422431DF261FFA70 /* Pods-Fantasy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fantasy/Info.plist;
@@ -261,6 +394,7 @@
 		};
 		F6BBF3AD1CDD8FE30084E1E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 500C51B625EE64841B881BFD /* Pods-Fantasy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fantasy/Info.plist;
@@ -289,6 +423,7 @@
 				F6BBF3AD1CDD8FE30084E1E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
