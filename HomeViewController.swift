@@ -13,6 +13,9 @@ import Parse
 class HomeViewController: UIViewController {
     @IBOutlet weak var teamName: UILabel!
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let team = PFUser.currentUser()?.objectForKey("team_name") as! String

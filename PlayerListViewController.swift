@@ -61,7 +61,7 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     func queries(){
         
         let query = PFQuery(className: "players")
-        query.orderByDescending("createdAt")
+        query.orderByDescending("name")
         query.includeKey("author")
         query.limit = 20
         

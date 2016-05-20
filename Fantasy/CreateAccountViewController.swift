@@ -17,6 +17,8 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -25,6 +27,7 @@ class CreateAccountViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBOutlet weak var userLabel: UILabel!
     
     @IBAction func createAccount(sender: AnyObject) {
         
@@ -34,12 +37,14 @@ class CreateAccountViewController: UIViewController {
         newUser["team_name"] = teamField.text
         newUser["admin"] = 0
         newUser["credits"] = 1000
-        
+        newUser["players"] = ""
         
         newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?)-> Void in
             if success{
                 print("yay")
                 self.performSegueWithIdentifier("teamSegue", sender: nil)
+              
+                
                 
                 
             }else{
