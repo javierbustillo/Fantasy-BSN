@@ -37,11 +37,13 @@ class CreateAccountViewController: UIViewController {
         newUser["team_name"] = teamField.text
         newUser["admin"] = 0
         newUser["credits"] = 1000
-        newUser["players"] = ""
+        
         
         newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?)-> Void in
             if success{
                 print("yay")
+                
+                
                 self.performSegueWithIdentifier("teamSegue", sender: nil)
               
                 

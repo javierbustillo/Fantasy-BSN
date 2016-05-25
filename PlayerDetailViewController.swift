@@ -47,19 +47,25 @@ class PlayerDetailViewController: UIViewController {
             
             PFUser.currentUser()?.incrementKey("credits", byAmount: -playerCredits)
             
-            let user = PFUser.currentUser()
-            user!["player"] = player["name"]
-            user!.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
-                if success{
-                    print("yahoo!")
-                    
+            let teamQuery = PFQuery(className: "Team")
+            teamQuery.whereKey("user", equalTo: PFUser.currentUser()!)
+            teamQuery.countObjectsInBackgroundWithBlock({ (count: Int32, error: NSError?) in
+                if count < 5{
+                   self.upload()
+                    print(count)
                 }else{
-                    print("google")
+                    print("you're done!")
                 }
-            })
+                
+                })
             
-            performSegueWithIdentifier("backtopick", sender: nil)
-        }else{
+            
+            
+            
+            
+            
+            
+                    }else{
             print("Not enough credits")
             //add alert
         }
@@ -69,20 +75,43 @@ class PlayerDetailViewController: UIViewController {
 
     
     // MARK: - Navigation
-    /*
+    
+    
+    func upload(){
+        let player = players![index!]
+        let Team = PFObject(className:"Team")
+        Team["player0"] = player["name"]
+        Team["user"] = PFUser.currentUser()
+        Team.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                print("What a save!")
+                self.performSegueWithIdentifier("backtopick", sender: nil)
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
+            }
+            
+            
+        }
+        
+    }
+    
+    
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "backtopick"{
-            let teamCreatorVC = segue.destinationViewController as! TeamCreatorViewController
-            teamCreatorVC.NewPlayer = PlayerName
-            teamCreatorVC.tableView.reloadData()
-            teamCreatorVC.queries()
+         //   let teamCreatorVC = segue.destinationViewController as! TeamCreatorViewController
+            
+           // teamCreatorVC.tableView.reloadData()
+            //teamCreatorVC.queries()
             
         }
     }
-    */
+    
 
 }

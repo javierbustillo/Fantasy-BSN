@@ -13,9 +13,12 @@ import Parse
 class PlayerListCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    var players: PFObject!{
+   
+    var Team: PFObject!{
         didSet{
-            nameLabel.text = PFUser.currentUser()?.objectForKey("player") as? String
+            nameLabel.text = Team["player0"] as? String
+           // nameLabel1.text = Team["player1"] as? String
+            
         }
     }
     

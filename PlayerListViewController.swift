@@ -39,7 +39,7 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
             
         }
         else{
-            print("wow")
+            print(":/")
             return 0
         }
         
@@ -100,6 +100,7 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
             
             playerDetailVC.players = players
             playerDetailVC.index = index
+            print("sending info!")
         
         }
     

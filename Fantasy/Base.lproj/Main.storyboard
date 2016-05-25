@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Log In View Controller-->
@@ -147,47 +148,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Fantasy Basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01E-ro-kRD">
-                                <rect key="frame" x="41" y="28" width="238" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KU-q4-HXt">
-                                <rect key="frame" x="41" y="57" width="238" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KU-q4-HXt">
+                                <rect key="frame" x="41" y="117" width="238" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="bmq-Tu-CRw"/>
+                                </constraints>
                                 <state key="normal" title="Pick your team"/>
                                 <connections>
                                     <segue destination="W9f-GA-X1m" kind="presentation" id="sZL-gq-DEq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mX5-c3-dAj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mX5-c3-dAj">
                                 <rect key="frame" x="139" y="518" width="43" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="57u-Dq-xur"/>
+                                </constraints>
                                 <state key="normal" title="Save"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining credit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYl-Hb-MW0">
-                                <rect key="frame" x="96" y="429" width="129" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining credit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYl-Hb-MW0">
+                                <rect key="frame" x="96" y="489" width="129" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hgR-MO-bVL">
-                                <rect key="frame" x="0.0" y="103" width="320" height="318"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hgR-MO-bVL">
+                                <rect key="frame" x="0.0" y="163" width="320" height="318"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="96" id="5yi-kx-VNp" customClass="PlayerListCell" customModule="Fantasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5yi-kx-VNp" id="WPH-D7-w1x">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8F-Cn-ui6">
-                                                    <rect key="frame" x="8" y="37" width="45" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8F-Cn-ui6">
+                                                    <rect key="frame" x="13" y="37" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Y8F-Cn-ui6" firstAttribute="leading" secondItem="WPH-D7-w1x" secondAttribute="leadingMargin" constant="5" id="AnL-EC-Q78"/>
+                                                <constraint firstItem="Y8F-Cn-ui6" firstAttribute="centerY" secondItem="WPH-D7-w1x" secondAttribute="centerY" id="PTZ-jp-Dsf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="Y8F-Cn-ui6" id="Btq-YQ-M66"/>
@@ -195,12 +200,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Fantasy Basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01E-ro-kRD">
+                                <rect key="frame" x="41" y="72" width="238" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hgR-MO-bVL" firstAttribute="top" secondItem="4KU-q4-HXt" secondAttribute="bottom" constant="8" symbolic="YES" id="25D-ph-nPe"/>
+                            <constraint firstItem="01E-ro-kRD" firstAttribute="leading" secondItem="4KU-q4-HXt" secondAttribute="leading" id="74U-Re-8eY"/>
+                            <constraint firstAttribute="bottom" secondItem="mX5-c3-dAj" secondAttribute="bottom" constant="20" symbolic="YES" id="7wi-fQ-wQR"/>
+                            <constraint firstItem="4KU-q4-HXt" firstAttribute="top" secondItem="1zP-kf-wT0" secondAttribute="bottom" constant="53" id="80m-sI-eFh"/>
+                            <constraint firstItem="01E-ro-kRD" firstAttribute="top" secondItem="1zP-kf-wT0" secondAttribute="bottom" constant="8" symbolic="YES" id="HeJ-ki-vTN"/>
+                            <constraint firstItem="4KU-q4-HXt" firstAttribute="centerX" secondItem="hgR-MO-bVL" secondAttribute="centerX" id="Kwj-rc-I4s"/>
+                            <constraint firstItem="mX5-c3-dAj" firstAttribute="top" secondItem="XYl-Hb-MW0" secondAttribute="bottom" constant="8" symbolic="YES" id="NOF-HP-d6i"/>
+                            <constraint firstItem="hgR-MO-bVL" firstAttribute="top" secondItem="01E-ro-kRD" secondAttribute="bottom" constant="40" id="VDw-AT-2De"/>
+                            <constraint firstItem="01E-ro-kRD" firstAttribute="trailing" secondItem="4KU-q4-HXt" secondAttribute="trailing" id="d3E-HP-Kn4"/>
+                            <constraint firstItem="hgR-MO-bVL" firstAttribute="leading" secondItem="LYC-QD-7pe" secondAttribute="leading" id="nEs-fF-v7K"/>
+                            <constraint firstItem="XYl-Hb-MW0" firstAttribute="centerX" secondItem="mX5-c3-dAj" secondAttribute="centerX" id="pMS-PE-K9s"/>
+                            <constraint firstItem="hgR-MO-bVL" firstAttribute="centerX" secondItem="XYl-Hb-MW0" secondAttribute="centerX" id="tXi-b0-VYs"/>
+                            <constraint firstAttribute="trailing" secondItem="hgR-MO-bVL" secondAttribute="trailing" id="xFo-Ux-dvG"/>
+                            <constraint firstItem="XYl-Hb-MW0" firstAttribute="top" secondItem="hgR-MO-bVL" secondAttribute="bottom" constant="8" symbolic="YES" id="zpH-hj-fru"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ugO-gP-GKh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="creditLabel" destination="XYl-Hb-MW0" id="FrP-lm-1ES"/>
+                        <outlet property="pickButton" destination="4KU-q4-HXt" id="hjd-WB-hTO"/>
                         <outlet property="tableView" destination="hgR-MO-bVL" id="EiX-aT-68Q"/>
                     </connections>
                 </viewController>
@@ -424,6 +453,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Nqq-d8-yGn"/>
+        <segue reference="Om3-kZ-RBb"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,20 +12,29 @@ import Parse
 class TeamCreatorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
+    @IBOutlet weak var pickButton: UIButton!
    
     
     var NewPlayer: String?
-    var players: [PFObject]!
+    var team: [PFObject]?
     
+    @IBOutlet weak var creditLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //queries()
+        
         tableView.delegate = self
         tableView.dataSource = self
-       // queries()
+        queries()
+        count()
+        
+        let creditsInt = PFUser.currentUser()?.objectForKey("credits")
+        let credits = String(creditsInt!)
+        
+        creditLabel.text = credits
+        
         
         
         
@@ -44,7 +53,16 @@ class TeamCreatorViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-       return 5
+        if let team = team{
+            
+            return team.count
+            
+            
+        }
+        else{
+            print("wow")
+            return 0
+        }
     }
     
     
@@ -52,19 +70,35 @@ class TeamCreatorViewController: UIViewController, UITableViewDataSource, UITabl
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! PlayerListCell
      
-        cell.players = PFUser.currentUser()?.objectForKey("name") as? PFObject
+        cell.Team = team![indexPath.row]
         
         cell.selectionStyle = .None
         return cell
     }
     
-    func queries(){
-        let query = PFQuery(className: "players")
-        query.fromLocalDatastore()
+    
+    func count(){
+        let query = PFQuery(className: "Team")
+        query.whereKey("user", equalTo: PFUser.currentUser()!)
         
-        query.findObjectsInBackgroundWithBlock { (players: [PFObject]?, error: NSError?) -> Void in
-            if let players = players {
-                self.players = players
+        query.countObjectsInBackgroundWithBlock { (count: Int32, error: NSError?) in
+            if count == 5{
+                self.pickButton.hidden = true
+            }else{
+                print("pick ahead")
+            }
+        }
+    }
+   
+    
+    func queries(){
+        let query = PFQuery(className: "Team")
+        query.whereKey("user", equalTo: PFUser.currentUser()!)
+        
+        
+        query.findObjectsInBackgroundWithBlock { (team: [PFObject]?, error: NSError?) -> Void in
+            if let team = team {
+                self.team = team
                 self.tableView.reloadData()
                 print("woo")
                 
@@ -74,6 +108,8 @@ class TeamCreatorViewController: UIViewController, UITableViewDataSource, UITabl
                 print(error?.code)
             }
         }
+        
+        
 
     
     //acuerdate añadir unpin cuando hagas el saveButton
